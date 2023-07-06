@@ -10,9 +10,9 @@ AND rel.meta_key REGEXP '^[0-9]+$'
 ORDER BY rel.meta_key
 
 // query to get users that doesn't have any course
-SELECT DISTINCT user.ID AS user_id
+SELECT DISTINCT user.ID AS user_id, 
+user.display_name as user_name
 FROM wp_users AS user
-INNER JOIN wp_usermeta AS usermeta ON usermeta.user_id = user.ID
 WHERE user.ID NOT IN (
   SELECT DISTINCT user_id
   FROM wp_usermeta
