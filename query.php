@@ -8,3 +8,15 @@ WHERE posts.post_type = 'course'
 AND posts.post_status = 'publish' 
 AND rel.meta_key REGEXP '^[0-9]+$' 
 ORDER BY rel.meta_key
+
+// query to get users that doesn't have any course
+SELECT DISTINCT user.ID AS user_id
+FROM wp_users AS user
+INNER JOIN wp_usermeta AS usermeta ON usermeta.user_id = user.ID
+WHERE user.ID NOT IN (
+  SELECT DISTINCT user_id
+  FROM wp_usermeta
+  INNER JOIN wp_posts AS post ON post.ID = meta_key
+  WHERE meta_key = post.ID
+)
+ORDER BY user.ID
