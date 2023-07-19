@@ -16,7 +16,7 @@
 
 .copyBox-fa input#myInput {
     border-radius: 8px;
-    width:  70%;
+    width: 70%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -48,7 +48,6 @@ button.rzinput2 {
 
 #coupon-alert{
     color: #fff;
-    margin-left: 30px;
 }
 
 
@@ -57,7 +56,7 @@ button.rzinput2 {
     <div class="coupon-icon">
          
     </div>
-    <input id="myInput" class="rzinput1" type="text" value="STUDY99" readonly=""><button class="rzinput2" onclick=" myFunction()">  Copy</button>
+    <input id="myInput" class="rzinput1" type="text" value="FLAT6" readonly=""><button class="rzinput2" onclick=" myFunction()">  Copy</button>
 </div>
 
 
