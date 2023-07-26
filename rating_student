@@ -1,0 +1,24 @@
+<style>
+.coure-dynamic-rating-and-students ul li {
+        display: inline-block !important;
+        margin-right: 20px !important;
+        color: #50617b;
+        line-height: 21px;
+        font-size: 14px !important;
+        font-weight: 400;
+        padding: 0 !important;
+    }
+    .ks-star-rating {
+        width: 70px;
+    }
+    .ks-star-rating .rating__background {
+        fill: #bfc3ca;
+        stroke: red;
+        stroke-width: 1;
+        height: 100%;
+        width: 100%;
+    }
+    .ks-star-rating .rating__value {
+        fill: #ffb94b;
+        height: 100%;
+    }</style>
