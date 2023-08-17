@@ -4,12 +4,13 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    max-width: 460px;
+    max-width: 400px;
     background: #FFFFFF;
-    border: 1.19976px solid rgba(16, 94, 166, 0.15);
-    border-radius: 10.5215px;
+    border-radius: 9px;
+    border: 1.069px solid rgba(59, 178, 128, 0.40);
+    background: #FFF;
     width: 100%;
-    height: 68px;
+    height: 60px;
 }
 
 .coupon-icon {
@@ -17,13 +18,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    border-right: 1px solid rgba(16, 94, 166, 0.15);
+    width: 13%;
+    border-right:  1.069px solid rgba(59, 178, 128, 0.40);
 }
 
 .copyBox-fa input#myInput {
-    width: calc(100% - 175px);
-    height: 100%;
+    width: 55%;
+    height: 50px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -31,37 +32,38 @@
     text-align: center;
     line-height: 29px;
     color: rgba(100, 100, 100, 0.9);
-    padding: 10px;
+    /*padding: 10px;*/
     border: none;
 }
 
 button.rzinput2 {
-    width: 120px;
+    width: 30%;
+    display: flex;
+    align-items: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     color: #fff;
-    background: #1948C0;
-    border-radius: 7px;
-    height: calc(100% - 10px);
+    border-radius: 7.032px;
+background: linear-gradient(180deg, #70C989 0%, #3BB280 100%);
+    /*margin-right: 5px;*/
+    height: 47px;
     border: none;
-    margin-right: 5px;
 }
 
 
 #coupon-alert{
-    color: #fff;
-    margin-left: 30px;
+    color: #000;
 }
 
 
 </style>
 <div class="copyBox-fa">
     <div class="coupon-icon">
-        <img src=" http://theanimalcare.org/wp-content/uploads/2023/06/Promo-Code-6.png">
+        <img src="https://www.istudy.org.uk/wp-content/uploads/2023/08/Group-1000004033-2-1.png">
     </div>
-    <input id="myInput" class="rzinput1" type="text" value="STUDY99" readonly=""><button class="rzinput2" onclick=" myFunction()"><img src="http://theanimalcare.org/wp-content/uploads/2023/06/Group-1000003963-1.png"> Copy</button>
+    <input id="myInput" class="rzinput1" type="text" value="LUCKYU" readonly=""><button class="rzinput2" onclick=" myFunction()"><img src="https://www.istudy.org.uk/wp-content/uploads/2023/08/Vector-4-1.png"> Copy</button>
 </div>
 
 
