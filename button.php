@@ -35,11 +35,15 @@
     /*padding: 10px;*/
     border: none;
 }
+.rzinput2 img{
+    margin-right: 5px;
+}
 
 button.rzinput2 {
     width: 30%;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
