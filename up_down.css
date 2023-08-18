@@ -1,0 +1,36 @@
+.up-down.foy-right-ud img{
+    position: absolute;
+    right: 0;
+}
+.up-down.foy-left-ud img{
+    position: absolute;
+    left: 0;
+}
+ 
+.up-down {
+    animation: up-down 4s infinite linear;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+@keyframes up-down {
+    0% {
+        transform: translate(0px,20px);
+    }
+
+    24% {
+        transform: translate(1px,0px);
+    }
+
+    50% {
+        transform: translate(1px,12px);
+    }
+
+    74% {
+        transform: translate(1px,20px);
+    }
+
+    100% {
+        transform: translate(1px,20px);
+    }
+}
