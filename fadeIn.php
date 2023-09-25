@@ -1314,3 +1314,6 @@
     animation-timing-function: linear;
     animation-iteration-count: 1
 }
+.animated.animated-slow {
+    animation-duration: 2s;
+}
