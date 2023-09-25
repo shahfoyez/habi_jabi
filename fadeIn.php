@@ -1317,3 +1317,7 @@
 .animated.animated-slow {
     animation-duration: 2s;
 }
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
