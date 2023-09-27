@@ -52,7 +52,7 @@
 .flash {
     animation-name: flash
 }
-
+// pulse
 @keyframes pulse {
     from,to {
         transform: scale3d(1,1,1)
@@ -66,7 +66,7 @@
 .pulse {
     animation-name: pulse
 }
-
+// rubberBand
 @keyframes rubberBand {
     from,to {
         transform: scale3d(1,1,1)
@@ -96,7 +96,7 @@
 .rubberBand {
     animation-name: rubberBand
 }
-
+// shake
 @keyframes shake {
     from,to {
         transform: translate3d(0,0,0)
@@ -114,7 +114,7 @@
 .shake {
     animation-name: shake
 }
-
+// headShake
 @keyframes headShake {
     0% {
         transform: translateX(0)
@@ -145,7 +145,7 @@
     animation-timing-function: ease-in-out;
     animation-name: headShake
 }
-
+// swing
 @keyframes swing {
     20% {
         transform: rotate3d(0,0,1,15deg)
@@ -172,7 +172,7 @@
     transform-origin: top center;
     animation-name: swing
 }
-
+// tada
 @keyframes tada {
     from,to {
         transform: scale3d(1,1,1)
@@ -194,7 +194,7 @@
 .tada {
     animation-name: tada
 }
-
+// wobble
 @keyframes wobble {
     from,to {
         transform: none
@@ -224,7 +224,7 @@
 .wobble {
     animation-name: wobble
 }
-
+// jello
 @keyframes jello {
     11.1%,from,to {
         transform: none
@@ -263,7 +263,7 @@
     animation-name: jello;
     transform-origin: center
 }
-
+// bounceIn
 @keyframes bounceIn {
     20%,40%,60%,80%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -300,7 +300,7 @@
 .bounceIn {
     animation-name: bounceIn
 }
-
+// bounceInDown
 @keyframes bounceInDown {
     60%,75%,90%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -332,7 +332,7 @@
 .bounceInDown {
     animation-name: bounceInDown
 }
-
+// bounceInLeft
 @keyframes bounceInLeft {
     60%,75%,90%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -364,7 +364,7 @@
 .bounceInLeft {
     animation-name: bounceInLeft
 }
-
+// bounceInRight
 @keyframes bounceInRight {
     60%,75%,90%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -396,7 +396,7 @@
 .bounceInRight {
     animation-name: bounceInRight
 }
-
+// bounceInUp
 @keyframes bounceInUp {
     60%,75%,90%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -428,7 +428,7 @@
 .bounceInUp {
     animation-name: bounceInUp
 }
-
+// fadeIn
 @keyframes fadeIn {
     from {
         opacity: 0
@@ -442,7 +442,7 @@
 .fadeIn {
     animation-name: fadeIn
 }
-
+// fadeInDown
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -458,7 +458,7 @@
 .fadeInDown {
     animation-name: fadeInDown
 }
-
+// fadeInLeft
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -474,7 +474,7 @@
 .fadeInLeft {
     animation-name: fadeInLeft
 }
-
+// fadeInRight
 @keyframes fadeInRight {
     from {
         opacity: 0;
@@ -490,7 +490,7 @@
 .fadeInRight {
     animation-name: fadeInRight
 }
-
+// fadeInUp
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -506,7 +506,7 @@
 .fadeInUp {
     animation-name: fadeInUp
 }
-
+// lightSpeedIn
 @keyframes lightSpeedIn {
     from {
         transform: translate3d(100%,0,0) skewX(-30deg);
@@ -533,7 +533,7 @@
     animation-name: lightSpeedIn;
     animation-timing-function: ease-out
 }
-
+// rotateIn
 @keyframes rotateIn {
     from {
         transform-origin: center;
@@ -551,7 +551,7 @@
 .rotateIn {
     animation-name: rotateIn
 }
-
+// rotateInDownLeft
 @keyframes rotateInDownLeft {
     from {
         transform-origin: left bottom;
@@ -569,7 +569,7 @@
 .rotateInDownLeft {
     animation-name: rotateInDownLeft
 }
-
+// rotateInDownRight
 @keyframes rotateInDownRight {
     from {
         transform-origin: right bottom;
@@ -587,7 +587,7 @@
 .rotateInDownRight {
     animation-name: rotateInDownRight
 }
-
+// rotateInUpLeft
 @keyframes rotateInUpLeft {
     from {
         transform-origin: left bottom;
@@ -605,7 +605,7 @@
 .rotateInUpLeft {
     animation-name: rotateInUpLeft
 }
-
+//rotateInUpRight
 @keyframes rotateInUpRight {
     from {
         transform-origin: right bottom;
@@ -623,7 +623,7 @@
 .rotateInUpRight {
     animation-name: rotateInUpRight
 }
-
+// rollIn
 @keyframes rollIn {
     from {
         opacity: 0;
@@ -639,7 +639,7 @@
 .rollIn {
     animation-name: rollIn
 }
-
+// zoomIn
 @keyframes zoomIn {
     from {
         opacity: 0;
@@ -654,7 +654,7 @@
 .zoomIn {
     animation-name: zoomIn
 }
-
+// zoomInDown
 @keyframes zoomInDown {
     from {
         opacity: 0;
@@ -672,7 +672,7 @@
 .zoomInDown {
     animation-name: zoomInDown
 }
-
+// zoomInLeft
 @keyframes zoomInLeft {
     from {
         opacity: 0;
@@ -690,7 +690,7 @@
 .zoomInLeft {
     animation-name: zoomInLeft
 }
-
+// zoomInRight
 @keyframes zoomInRight {
     from {
         opacity: 0;
@@ -708,7 +708,7 @@
 .zoomInRight {
     animation-name: zoomInRight
 }
-
+// zoomInUp
 @keyframes zoomInUp {
     from {
         opacity: 0;
@@ -726,7 +726,7 @@
 .zoomInUp {
     animation-name: zoomInUp
 }
-
+// slideInDown
 @keyframes slideInDown {
     from {
         transform: translate3d(0,-100%,0);
@@ -741,7 +741,7 @@
 .slideInDown {
     animation-name: slideInDown
 }
-
+// slideInLeft
 @keyframes slideInLeft {
     from {
         transform: translate3d(-100%,0,0);
@@ -756,7 +756,7 @@
 .slideInLeft {
     animation-name: slideInLeft
 }
-
+// slideInRight
 @keyframes slideInRight {
     from {
         transform: translate3d(100%,0,0);
@@ -771,7 +771,7 @@
 .slideInRight {
     animation-name: slideInRight
 }
-
+// slideInUp
 @keyframes slideInUp {
     from {
         transform: translate3d(0,100%,0);
