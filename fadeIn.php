@@ -1,3 +1,18 @@
+// duration
+.foy-animation:active,.foy-animation:focus,.foy-animation:hover {
+    animation-name: elementor-animation-buzz-out;
+    animation-duration: .75s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+.foy-animation {
+    animation-duration: 2s;
+}
+.foy-animation {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+// bounce
 @keyframes bounce {
     20%,53%,80%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
@@ -23,7 +38,7 @@
     animation-name: bounce;
     transform-origin: center bottom
 }
-
+// flash
 @keyframes flash {
     50%,from,to {
         opacity: 1
@@ -1306,18 +1321,4 @@
     100% {
         transform: translateX(-1px) rotate(0)
     }
-}
-
-.elementor-animation-buzz-out:active,.elementor-animation-buzz-out:focus,.elementor-animation-buzz-out:hover {
-    animation-name: elementor-animation-buzz-out;
-    animation-duration: .75s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1
-}
-.animated.animated-slow {
-    animation-duration: 2s;
-}
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
 }
