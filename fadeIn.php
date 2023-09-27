@@ -1,18 +1,37 @@
-// duration
-.foy-animation:active,.foy-animation:focus,.foy-animation:hover {
-    animation-name: elementor-animation-buzz-out;
-    animation-duration: .75s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
+.test{
+  /*transform: skew(-10deg);*/
+  /*animation-delay: 0s,.3s;*/
+  /*animation-timing-function: ease-out,ease-in-out;*/
+  /*animation-iteration-count: 1,infinite;*/
+  /*animation-fill-mode: forwards;*/
+  /*animation-direction: normal,alternate;*/
+  /*animation-duration: .3s,1.5s;*/
+  /*animation-delay: 0s,.3s;*/
+  /*animation-timing-function: ease-out,ease-in-out;*/
+  /*animation-iteration-count: 1,infinite;*/
+  /*animation-fill-mode: forwards;*/
+  /*animation-direction: normal,alternate;*/
+  /*transform: translateY(8px);*/
+  /*animation-name: elementor-animation-pulse-grow;*/
+  /*animation-duration: .3s;*/
+  /*animation-timing-function: linear;*/
+  /*animation-iteration-count: infinite;*/
+  /*animation-direction: alternate;*/
+  /*transition-duration: .3s;*/
+  /*transition-property: transform;*/
+  /*transform: scale(1.1);*/
 }
-.foy-animation {
-    animation-duration: 2s;
-}
-.foy-animation {
+.foy-animation:hover {
+    animation-name: pulse;
     animation-duration: 1s;
     animation-fill-mode: both;
+    animation-iteration-count: 5;
+    animation-timing-function: linear;
+    transform-origin: center bottom;
+    transform: scale(1.1);
+    animation-delay: 0s,.3s;
 }
-// bounce
+
 @keyframes bounce {
     20%,53%,80%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1);
@@ -36,9 +55,9 @@
 
 .bounce {
     animation-name: bounce;
-    transform-origin: center bottom
+    transform-origin: center bottom;
 }
-// flash
+
 @keyframes flash {
     50%,from,to {
         opacity: 1
@@ -52,7 +71,7 @@
 .flash {
     animation-name: flash
 }
-// pulse
+
 @keyframes pulse {
     from,to {
         transform: scale3d(1,1,1)
@@ -66,7 +85,7 @@
 .pulse {
     animation-name: pulse
 }
-// rubberBand
+
 @keyframes rubberBand {
     from,to {
         transform: scale3d(1,1,1)
@@ -96,7 +115,7 @@
 .rubberBand {
     animation-name: rubberBand
 }
-// shake
+
 @keyframes shake {
     from,to {
         transform: translate3d(0,0,0)
@@ -114,7 +133,7 @@
 .shake {
     animation-name: shake
 }
-// headShake
+
 @keyframes headShake {
     0% {
         transform: translateX(0)
@@ -145,7 +164,7 @@
     animation-timing-function: ease-in-out;
     animation-name: headShake
 }
-// swing
+
 @keyframes swing {
     20% {
         transform: rotate3d(0,0,1,15deg)
@@ -172,7 +191,7 @@
     transform-origin: top center;
     animation-name: swing
 }
-// tada
+
 @keyframes tada {
     from,to {
         transform: scale3d(1,1,1)
@@ -194,7 +213,7 @@
 .tada {
     animation-name: tada
 }
-// wobble
+
 @keyframes wobble {
     from,to {
         transform: none
@@ -224,7 +243,7 @@
 .wobble {
     animation-name: wobble
 }
-// jello
+
 @keyframes jello {
     11.1%,from,to {
         transform: none
@@ -263,7 +282,7 @@
     animation-name: jello;
     transform-origin: center
 }
-// bounceIn
+
 @keyframes bounceIn {
     20%,40%,60%,80%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -300,7 +319,7 @@
 .bounceIn {
     animation-name: bounceIn
 }
-// bounceInDown
+
 @keyframes bounceInDown {
     60%,75%,90%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -332,7 +351,7 @@
 .bounceInDown {
     animation-name: bounceInDown
 }
-// bounceInLeft
+
 @keyframes bounceInLeft {
     60%,75%,90%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -364,7 +383,7 @@
 .bounceInLeft {
     animation-name: bounceInLeft
 }
-// bounceInRight
+
 @keyframes bounceInRight {
     60%,75%,90%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -396,7 +415,7 @@
 .bounceInRight {
     animation-name: bounceInRight
 }
-// bounceInUp
+
 @keyframes bounceInUp {
     60%,75%,90%,from,to {
         animation-timing-function: cubic-bezier(.215,.61,.355,1)
@@ -428,7 +447,7 @@
 .bounceInUp {
     animation-name: bounceInUp
 }
-// fadeIn
+
 @keyframes fadeIn {
     from {
         opacity: 0
@@ -442,7 +461,7 @@
 .fadeIn {
     animation-name: fadeIn
 }
-// fadeInDown
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -458,7 +477,7 @@
 .fadeInDown {
     animation-name: fadeInDown
 }
-// fadeInLeft
+
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -474,7 +493,7 @@
 .fadeInLeft {
     animation-name: fadeInLeft
 }
-// fadeInRight
+ 
 @keyframes fadeInRight {
     from {
         opacity: 0;
@@ -490,7 +509,7 @@
 .fadeInRight {
     animation-name: fadeInRight
 }
-// fadeInUp
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -506,7 +525,7 @@
 .fadeInUp {
     animation-name: fadeInUp
 }
-// lightSpeedIn
+
 @keyframes lightSpeedIn {
     from {
         transform: translate3d(100%,0,0) skewX(-30deg);
@@ -533,7 +552,7 @@
     animation-name: lightSpeedIn;
     animation-timing-function: ease-out
 }
-// rotateIn
+
 @keyframes rotateIn {
     from {
         transform-origin: center;
@@ -551,7 +570,7 @@
 .rotateIn {
     animation-name: rotateIn
 }
-// rotateInDownLeft
+
 @keyframes rotateInDownLeft {
     from {
         transform-origin: left bottom;
@@ -569,7 +588,7 @@
 .rotateInDownLeft {
     animation-name: rotateInDownLeft
 }
-// rotateInDownRight
+
 @keyframes rotateInDownRight {
     from {
         transform-origin: right bottom;
@@ -587,7 +606,7 @@
 .rotateInDownRight {
     animation-name: rotateInDownRight
 }
-// rotateInUpLeft
+
 @keyframes rotateInUpLeft {
     from {
         transform-origin: left bottom;
@@ -605,7 +624,7 @@
 .rotateInUpLeft {
     animation-name: rotateInUpLeft
 }
-//rotateInUpRight
+
 @keyframes rotateInUpRight {
     from {
         transform-origin: right bottom;
@@ -623,7 +642,7 @@
 .rotateInUpRight {
     animation-name: rotateInUpRight
 }
-// rollIn
+
 @keyframes rollIn {
     from {
         opacity: 0;
@@ -639,7 +658,7 @@
 .rollIn {
     animation-name: rollIn
 }
-// zoomIn
+
 @keyframes zoomIn {
     from {
         opacity: 0;
@@ -654,7 +673,7 @@
 .zoomIn {
     animation-name: zoomIn
 }
-// zoomInDown
+
 @keyframes zoomInDown {
     from {
         opacity: 0;
@@ -672,7 +691,7 @@
 .zoomInDown {
     animation-name: zoomInDown
 }
-// zoomInLeft
+
 @keyframes zoomInLeft {
     from {
         opacity: 0;
@@ -690,7 +709,7 @@
 .zoomInLeft {
     animation-name: zoomInLeft
 }
-// zoomInRight
+
 @keyframes zoomInRight {
     from {
         opacity: 0;
@@ -708,7 +727,7 @@
 .zoomInRight {
     animation-name: zoomInRight
 }
-// zoomInUp
+
 @keyframes zoomInUp {
     from {
         opacity: 0;
@@ -726,7 +745,7 @@
 .zoomInUp {
     animation-name: zoomInUp
 }
-// slideInDown
+
 @keyframes slideInDown {
     from {
         transform: translate3d(0,-100%,0);
@@ -741,7 +760,7 @@
 .slideInDown {
     animation-name: slideInDown
 }
-// slideInLeft
+
 @keyframes slideInLeft {
     from {
         transform: translate3d(-100%,0,0);
@@ -756,7 +775,7 @@
 .slideInLeft {
     animation-name: slideInLeft
 }
-// slideInRight
+
 @keyframes slideInRight {
     from {
         transform: translate3d(100%,0,0);
@@ -771,7 +790,7 @@
 .slideInRight {
     animation-name: slideInRight
 }
-// slideInUp
+
 @keyframes slideInUp {
     from {
         transform: translate3d(0,100%,0);
@@ -815,26 +834,13 @@
     }
 }
 
-.elementor-animation-pulse:active,.elementor-animation-pulse:focus,.elementor-animation-pulse:hover {
-    animation-name: elementor-animation-pulse;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite
-}
-
 @keyframes elementor-animation-pulse-grow {
     to {
         transform: scale(1.1)
     }
 }
 
-.elementor-animation-pulse-grow:active,.elementor-animation-pulse-grow:focus,.elementor-animation-pulse-grow:hover {
-    animation-name: elementor-animation-pulse-grow;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate
-}
+
 
 @keyframes elementor-animation-pulse-shrink {
     to {
@@ -842,13 +848,7 @@
     }
 }
 
-.elementor-animation-pulse-shrink:active,.elementor-animation-pulse-shrink:focus,.elementor-animation-pulse-shrink:hover {
-    animation-name: elementor-animation-pulse-shrink;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate
-}
+
 
 @keyframes elementor-animation-push {
     50% {
@@ -860,80 +860,12 @@
     }
 }
 
-.elementor-animation-push:active,.elementor-animation-push:focus,.elementor-animation-push:hover {
-    animation-name: elementor-animation-push;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1
-}
+
 
 @keyframes elementor-animation-pop {
     50% {
         transform: scale(1.2)
     }
-}
-
-.elementor-animation-pop:active,.elementor-animation-pop:focus,.elementor-animation-pop:hover {
-    animation-name: elementor-animation-pop;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1
-}
-
-.elementor-animation-bounce-in {
-    transition-duration: .5s
-}
-
-.elementor-animation-bounce-in:active,.elementor-animation-bounce-in:focus,.elementor-animation-bounce-in:hover {
-    transform: scale(1.2);
-    transition-timing-function: cubic-bezier(0.47,2.02,.31,-.36)
-}
-
-.elementor-animation-bounce-out {
-    transition-duration: .5s
-}
-
-.elementor-animation-bounce-out:active,.elementor-animation-bounce-out:focus,.elementor-animation-bounce-out:hover {
-    transform: scale(0.8);
-    transition-timing-function: cubic-bezier(0.47,2.02,.31,-.36)
-}
-
-.elementor-animation-rotate {
-    transition-duration: .3s;
-    transition-property: transform
-}
-
-.elementor-animation-rotate:active,.elementor-animation-rotate:focus,.elementor-animation-rotate:hover {
-    transform: rotate(4deg)
-}
-
-.elementor-animation-grow-rotate {
-    transition-duration: .3s;
-    transition-property: transform
-}
-
-.elementor-animation-grow-rotate:active,.elementor-animation-grow-rotate:focus,.elementor-animation-grow-rotate:hover {
-    transform: scale(1.1) rotate(4deg)
-}
-
-.elementor-animation-float {
-    transition-duration: .3s;
-    transition-property: transform;
-    transition-timing-function: ease-out
-}
-
-.elementor-animation-float:active,.elementor-animation-float:focus,.elementor-animation-float:hover {
-    transform: translateY(-8px)
-}
-
-.elementor-animation-sink {
-    transition-duration: .3s;
-    transition-property: transform;
-    transition-timing-function: ease-out
-}
-
-.elementor-animation-sink:active,.elementor-animation-sink:focus,.elementor-animation-sink:hover {
-    transform: translateY(8px)
 }
 
 @keyframes elementor-animation-bob {
@@ -956,15 +888,6 @@
     }
 }
 
-.elementor-animation-bob:active,.elementor-animation-bob:focus,.elementor-animation-bob:hover {
-    animation-name: elementor-animation-bob-float,elementor-animation-bob;
-    animation-duration: .3s,1.5s;
-    animation-delay: 0s,.3s;
-    animation-timing-function: ease-out,ease-in-out;
-    animation-iteration-count: 1,infinite;
-    animation-fill-mode: forwards;
-    animation-direction: normal,alternate
-}
 
 @keyframes elementor-animation-hang {
     0% {
@@ -984,45 +907,6 @@
     100% {
         transform: translateY(8px)
     }
-}
-
-.elementor-animation-hang:active,.elementor-animation-hang:focus,.elementor-animation-hang:hover {
-    animation-name: elementor-animation-hang-sink,elementor-animation-hang;
-    animation-duration: .3s,1.5s;
-    animation-delay: 0s,.3s;
-    animation-timing-function: ease-out,ease-in-out;
-    animation-iteration-count: 1,infinite;
-    animation-fill-mode: forwards;
-    animation-direction: normal,alternate
-}
-
-.elementor-animation-skew {
-    transition-duration: .3s;
-    transition-property: transform
-}
-
-.elementor-animation-skew:active,.elementor-animation-skew:focus,.elementor-animation-skew:hover {
-    transform: skew(-10deg)
-}
-
-.elementor-animation-skew-forward {
-    transition-duration: .3s;
-    transition-property: transform;
-    transform-origin: 0 100%
-}
-
-.elementor-animation-skew-forward:active,.elementor-animation-skew-forward:focus,.elementor-animation-skew-forward:hover {
-    transform: skew(-10deg)
-}
-
-.elementor-animation-skew-backward {
-    transition-duration: .3s;
-    transition-property: transform;
-    transform-origin: 0 100%
-}
-
-.elementor-animation-skew-backward:active,.elementor-animation-skew-backward:focus,.elementor-animation-skew-backward:hover {
-    transform: skew(10deg)
 }
 
 @keyframes elementor-animation-wobble-vertical {
@@ -1051,13 +935,6 @@
     }
 }
 
-.elementor-animation-wobble-vertical:active,.elementor-animation-wobble-vertical:focus,.elementor-animation-wobble-vertical:hover {
-    animation-name: elementor-animation-wobble-vertical;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1
-}
-
 @keyframes elementor-animation-wobble-horizontal {
     16.65% {
         transform: translateX(8px)
@@ -1082,13 +959,6 @@
     100% {
         transform: translateX(0)
     }
-}
-
-.elementor-animation-wobble-horizontal:active,.elementor-animation-wobble-horizontal:focus,.elementor-animation-wobble-horizontal:hover {
-    animation-name: elementor-animation-wobble-horizontal;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1
 }
 
 @keyframes elementor-animation-wobble-to-bottom-right {
@@ -1117,13 +987,6 @@
     }
 }
 
-.elementor-animation-wobble-to-bottom-right:active,.elementor-animation-wobble-to-bottom-right:focus,.elementor-animation-wobble-to-bottom-right:hover {
-    animation-name: elementor-animation-wobble-to-bottom-right;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1
-}
-
 @keyframes elementor-animation-wobble-to-top-right {
     16.65% {
         transform: translate(8px,-8px)
@@ -1148,13 +1011,6 @@
     100% {
         transform: translate(0,0)
     }
-}
-
-.elementor-animation-wobble-to-top-right:active,.elementor-animation-wobble-to-top-right:focus,.elementor-animation-wobble-to-top-right:hover {
-    animation-name: elementor-animation-wobble-to-top-right;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1
 }
 
 @keyframes elementor-animation-wobble-top {
@@ -1183,17 +1039,6 @@
     }
 }
 
-.elementor-animation-wobble-top {
-    transform-origin: 0 100%
-}
-
-.elementor-animation-wobble-top:active,.elementor-animation-wobble-top:focus,.elementor-animation-wobble-top:hover {
-    animation-name: elementor-animation-wobble-top;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1
-}
-
 @keyframes elementor-animation-wobble-bottom {
     16.65% {
         transform: skew(-12deg)
@@ -1218,17 +1063,6 @@
     100% {
         transform: skew(0)
     }
-}
-
-.elementor-animation-wobble-bottom {
-    transform-origin: 100% 0
-}
-
-.elementor-animation-wobble-bottom:active,.elementor-animation-wobble-bottom:focus,.elementor-animation-wobble-bottom:hover {
-    animation-name: elementor-animation-wobble-bottom;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1
 }
 
 @keyframes elementor-animation-wobble-skew {
@@ -1257,13 +1091,6 @@
     }
 }
 
-.elementor-animation-wobble-skew:active,.elementor-animation-wobble-skew:focus,.elementor-animation-wobble-skew:hover {
-    animation-name: elementor-animation-wobble-skew;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1
-}
-
 @keyframes elementor-animation-buzz {
     50% {
         transform: translateX(3px) rotate(2deg)
@@ -1272,13 +1099,6 @@
     100% {
         transform: translateX(-3px) rotate(-2deg)
     }
-}
-
-.elementor-animation-buzz:active,.elementor-animation-buzz:focus,.elementor-animation-buzz:hover {
-    animation-name: elementor-animation-buzz;
-    animation-duration: .15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite
 }
 
 @keyframes elementor-animation-buzz-out {
@@ -1321,4 +1141,3 @@
     100% {
         transform: translateX(-1px) rotate(0)
     }
-}
