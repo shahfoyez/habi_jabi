@@ -1,0 +1,51 @@
+<style>
+    /* === SVG Star Rating === */
+                .nxt-card__stars {
+                    display: inline-block;
+                    width: 100px;  /* Adjust star size */
+                    height: 20px;
+                }
+
+                .rating {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .rating__background {
+                    width: 100%;
+                    height: 100%;
+                    fill: #2e7d58; /* empty stars */
+                }
+
+                .rating__value {
+                    height: 100%;
+                    fill: #00ff85; /* filled stars */
+                }
+                /* === SVG Star Rating end=== */
+</style>
+      <div class="foy-course-meta">
+                    <!-- SVG Star Rating -->
+                    <div class="nxt-card__stars">
+                        <svg viewBox="0 0 1000 200" class="rating" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <polygon id="star-<?php echo $course_id; ?>"
+                                         points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66">
+                                </polygon>
+                                <clipPath id="stars-<?php echo $course_id; ?>">
+                                    <use xlink:href="#star-<?php echo $course_id; ?>"></use>
+                                    <use xlink:href="#star-<?php echo $course_id; ?>" x="20%"></use>
+                                    <use xlink:href="#star-<?php echo $course_id; ?>" x="40%"></use>
+                                    <use xlink:href="#star-<?php echo $course_id; ?>" x="60%"></use>
+                                    <use xlink:href="#star-<?php echo $course_id; ?>" x="80%"></use>
+                                </clipPath>
+                            </defs>
+                            <!-- Empty stars -->
+                            <rect class="rating__background" clip-path="url(#stars-<?php echo $course_id; ?>)"></rect>
+                            <!-- Filled stars -->
+                            <rect width="<?php echo floatval($rating) ? 20 * floatval($rating) : 0; ?>%"
+                                  class="rating__value" clip-path="url(#stars-<?php echo $course_id; ?>)">
+                            </rect>
+                        </svg>
+                    </div>
+                    <span class="foy-students">| <?php echo intval($students); ?> Students</span>
+                </div>
