@@ -1,235 +1,262 @@
-<style>
-    .foy-custom-searchform #searchform{
-        display: flex;
-        align-items: center;
-        background: #fff;
-    }
-    #searchdiv span {
-        margin: 0 !important;
-        display: inline !important;
-    }
-    #searchdiv {
-        padding-top: 40px !important;
-    }
-    /* for ajax search */
-    .foy-suggestion-box, .foy-suggestion-box-1, .foy-suggestion-box-2 {
-        position: absolute;
-        background: #ffffff;
-        max-width: 600px !important;
-        width: 100%;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
-        display: none;
-        z-index: 999999;
-    }
-    /*.foy-suggestion-box{*/
-    /*    height: 100%;*/
-    /*    overflow: auto;*/
-    /*}*/
-    .foy-suggestion-box-1{
-        top: 200px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .foy-suggestion-box-1 {
-        max-width: 370px !important;
-        width: 100% !important;
-    }
-
-    .foy-course-list img, .foy-course-list-1 img, .foy-course-list-2 img {
-        height: 45px;
-        width: 60px;
-        border-radius: 3px;
-        margin-right: 5px;
-    }
-
-    .foy-suggestion-box hr, .foy-suggestion-box-1 hr, .foy-suggestion-box-2 hr {
-        margin-top: 10px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .foy-suggestion-box hr:last-child,  .foy-suggestion-box-1 hr:last-child, .foy-suggestion-box-2 hr:last-child {
-        display: none;
-    }
-
-    #foy-loading, #foy-loading-1, #foy-loading-2 {
-        display: none;
-        background: #ffffff;
-        padding: 3px 5px 3px 5px;
-    }
-
-    #foy-loading0-1 img, #foy-loading0-2 img {
-        height: 17px;
-        width: 20px;
-    }
-    #foy-loading img {
-        height: 40px;
-        width: 40px;
-    }
-
-
-    .foy-suggestion-box h3, .foy-suggestion-box-1 h3, .foy-suggestion-box-2 h3 {
-        margin: 0px;
-        font-size: 12px;
-    }
-    .foy-course-list a {
-        padding: 0px !important;
-        font-size: 14px;
-        line-height: 22px;
-    }
-    .foy-course-list ul#menu-main-menu li a {
-        padding: 0px !important;
-    }
-    .foy-course-list {
-        align-items: center;
-        display: flex;
-        justify-content: start;
-    }
-
-</style>
-<script>
-    function foyFunction01() {
-        jQuery('#foy-suggestion-box').css('display', 'none');
-        // Add the suggestion box below the form
-
-        jQuery('#foy-loading-1').css('display', 'block');
-        const input_1 = document.querySelector('.home-hero-search #searchform input[name="s"]');
-
-        var keyword_1 = input_1.value;
-        if (keyword_1.length < 4) {
-            jQuery('#foy-suggestion-box-1').html("");
-            jQuery('#foy-suggestion-box-1').css('display', 'none');
-            jQuery('#foy-loading-1').css('display', 'none');
-        }
-        else {
-            jQuery.ajax({
-                url: ajaxurl,
-                //url: "/janets/wp-admin/admin-ajax.php",
-                type: 'get',
-                data: {
-                    action: 'data_fetch',
-                    keyword: keyword_1
-                },
-                success: function(data) {
-                    console.log(data);
-                    jQuery('#foy-suggestion-box-1').html(data);
-                    jQuery('#foy-suggestion-box-1').css('display', 'block');
-                    jQuery('#foy-loading-1').css('display', 'none');
+     <style>
+                /* for ajax search */
+                .foy-suggestion-box {
+                  position: absolute;
+                  background: #ffffff;
+                  max-width: 345px !important;
+                  width: 100%;
+                  padding: 15px;
+                  border-radius: 8px;
+                  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+                  display: none;
+                  z-index: 999999;
                 }
-            });
-        }
-    }
-    const navSearch_1 = document.querySelector('#searchform');
 
-    navSearch_1.insertAdjacentHTML('afterend', '<div class="foy-suggestion-box-1" id="foy-suggestion-box-1"><!-- course suggestion --></div>');
-
-    // Get the input element
-    const input_1 = document.querySelector('#searchform');
-
-    const spinner_1 = document.createElement('div');
-    spinner_1.id = 'foy-loading-1';
-    spinner_1.className = 'spinner-border';
-    spinner_1.setAttribute('role', 'status');
-    spinner_1.innerHTML = '<img src="https://coursegate.co.uk/wp-content/uploads/2023/06/loader.gif" alt="search loader">';
-    input_1.after(spinner_1);
-    // Add the event listener
-    input_1.addEventListener('keyup', foyFunction01);
-</script>
-
-
-
-
-<script type="text/javascript">
-    function foyFunction2() {
-        jQuery('#foy-suggestion-box').css('display', 'none');
-        jQuery('#foy-suggestion-box-1').css('display', 'none');
-        jQuery('#foy-loading-2').css('display', 'block');
-        const input_2 = document.querySelector('#searchform input[name="s"]');
-        var keyword_2 = input_2.value;
-        if (keyword_2.length < 4) {
-            jQuery('#foy-suggestion-box-2').html("");
-            jQuery('#foy-suggestion-box-2').css('display', 'none');
-            jQuery('#foy-loading-2').css('display', 'none');
-        }
-        else {
-            jQuery.ajax({
-                url: ajaxurl,
-                //url: "/janets/wp-admin/admin-ajax.php",
-                type: 'get',
-                data: {
-                    action: 'data_fetch',
-                    keyword: keyword_2
-                },
-                success: function(data) {
-                    jQuery('#foy-suggestion-box-2').html(data);
-                    jQuery('#foy-suggestion-box-2').css('display', 'block');
-                    jQuery('#foy-loading-2').css('display', 'none');
+                .foy-search-suggestion .foy-course-list img {
+                  height: 45px;
+                  width: 60px;
+                  border-radius: 3px;
+                  margin-right: 5px;
                 }
-            });
-        }
-    }
-    // Add the suggestion box below the form
-    const navSearch_2 = document.querySelector('#searchform');
-    navSearch_2.insertAdjacentHTML('beforeend', '<div class="foy-suggestion-box-2" id="foy-suggestion-box-2"><!-- course suggestion --></div>');
 
-    // Get the input element
-    const input_2 = document.querySelector('#searchform input[name="s"]');
-    const spinner_2 = document.createElement('div');
-    spinner_2.id = 'foy-loading-2';
-    spinner_2.className = 'spinner-border';
-    spinner_2.innerHTML = '<img src="https://coursegate.co.uk/wp-content/uploads/2023/06/loader.gif" alt="search loader">';
-    input_2.after(spinner_2);
-
-    // Add the event listener
-    input_2.addEventListener('keyup', foyFunction2);
-</script>
-
-
-<script type="text/javascript">
-    function foyFunction() {
-        // jQuery('#foy-suggestion-box').css('display', 'none');
-        jQuery('#foy-loading').css('display', 'block');
-        const input = document.querySelector('.foy-custom-searchform input[name="s"]');
-        var keyword = input.value;
-        if (keyword.length < 4) {
-            jQuery('#foy-suggestion-box').html("");
-            jQuery('#foy-suggestion-box').css('display', 'none');
-            jQuery('#foy-loading').css('display', 'none');
-        }
-        else {
-            jQuery.ajax({
-                url: ajaxurl,
-                //url: "/janets/wp-admin/admin-ajax.php",
-                type: 'get',
-                data: {
-                    action: 'data_fetch',
-                    keyword: keyword
-                },
-                success: function(data) {
-                    jQuery('#foy-suggestion-box').html(data);
-                    jQuery('#foy-suggestion-box').css('display', 'block');
-                    jQuery('#foy-loading').css('display', 'none');
+                .foy-suggestion-box hr {
+                  margin-top: 10px !important;
+                  margin-bottom: 10px !important;
                 }
-            });
-        }
-    }
-    // Add the suggestion box below the form
-    const navSearch = document.querySelector('.foy-custom-searchform');
-    console.log(navSearch);
 
-    navSearch.insertAdjacentHTML('beforeend', '<div class="foy-suggestion-box" id="foy-suggestion-box"><!-- course suggestion --></div>');
+                .foy-suggestion-box hr:last-child {
+                  display: none;
+                }
 
-    // Get the input element
-    const input = document.querySelector('.foy-custom-searchform input[name="s"]');
-    const spinner = document.createElement('div');
-    spinner.id = 'foy-loading';
-    spinner.className = 'spinner-border';
-    spinner.setAttribute('role', 'status');
-    spinner.innerHTML = '<img src="https://coursegate.co.uk/wp-content/uploads/2023/06/loader.gif" alt="search loader">';
-    input.after(spinner);
+                #foy-loading {
+                  display: none;
+                  background: transparent;
+                  padding: 0;
+                  position: absolute;
+                  right: 4%;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
 
-    // Add the event listener
-    input.addEventListener('keyup', foyFunction);
-</script>
+                #foy-loading img {
+                  height: 30px;
+                  width: 30px;
+                }
+
+                .foy-suggestion-box h3 {
+                  margin: 0px;
+                  font-size: 12px;
+                }
+
+                #foy-search-suggestion .foy-course-list a {
+                  padding: 0px !important;
+                  font-size: 14px;
+                  line-height: 22px;
+                }
+
+                #foy-search-suggestion .foy-course-list ul#menu-main-menu li a {
+                  padding: 0px !important;
+                }
+
+                #foy-search-suggestion .foy-course-list {
+                  align-items: center;
+                  display: flex;
+                  justify-content: start;
+                }
+
+                .search-highlight {
+                  color: rgb(255, 107, 129);
+                }
+
+                .foy-search-cat {
+                  align-items: center;
+                  display: flex;
+                  justify-content: start;
+                  gap: 10px;
+                  s
+                }
+              </style>
+              <div class="header__search-input">
+                <div class="search-container" id="foy-search-suggestion">
+                  <form method="GET" action="<?php echo get_site_url(); ?>" id="header-search-form">
+                    <input type="text" name="s" placeholder="Search Courses ..." class="autocomplete_field"
+                      id="autoCompleteOne" value="" autocomplete="off">
+                    <input type="hidden" name="post_type" value="course">
+                    <button type="submit" id="search_iconOne" class="btn btn-warning btn-fla" aria-label="Search">
+                      <span class="fa fa-search" style="pointer-events: none;"></span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <script type="text/javascript">
+                jQuery(document).ready(function ($) {
+                  function foyFunction() {
+                    const navSearch = $(this).closest('#foy-search-suggestion');
+                    const suggestionBox = navSearch.find('.foy-suggestion-box');
+                    let loader = navSearch.find('#foy-loading');
+                    const keyword = $(this).val();
+                    if (keyword.length < 4) {
+                      if (suggestionBox) {
+                        suggestionBox.remove();
+                      }
+                      if (loader) {
+                        loader.remove();
+                      }
+                    } else {
+                      if (!suggestionBox.length) {
+                        navSearch.append(
+                          '<div class="foy-suggestion-box" id="foy-suggestion-box"><!-- course suggestion --></div>'
+                        );
+                      }
+                      if (!loader.length) {
+                        const input = navSearch.find('input[name="s"]');
+                        loader = $('<div>', {
+                          id: 'foy-loading',
+                          class: 'spinner-border',
+                          role: 'status'
+                        })
+                          .html(
+                            '<img src="https://www.johnacademy.co.uk/wp-content/uploads/2024/04/loader-3.webp" alt="search loader">'
+                          );
+                        input.after(loader);
+                      }
+                      loader.show();
+                      $.ajax({
+                        url: ajaxurl,
+                        type: 'get',
+                        data: {
+                          action: 'data_fetch',
+                          keyword: keyword
+                        },
+                        success: function (data) {
+                          const suggestionBox = navSearch.find(
+                            '.foy-suggestion-box');
+                          suggestionBox.html(data).show();
+                          loader.hide();
+                        }
+                      });
+                    }
+                  }
+                  $('#foy-search-suggestion input[name="s"]').on('keyup', foyFunction);
+                });
+                document.addEventListener('click', function (event) {
+                  var suggestionBox = document.querySelector('.foy-suggestion-box');
+                  if (suggestionBox) {
+                    let loader = document.querySelector('#foy-loading');
+                    var isClickedInside = suggestionBox.contains(event.target);
+                    if (!isClickedInside) {
+                      suggestionBox.remove();
+                      if (loader) {
+                        loader.remove();
+                      }
+                    }
+                  }
+                });
+              </script>
+
+
+
+
+       // Search Suggestion
+
+            function data_fetch()
+            {
+                $keyword = sanitize_text_field($_REQUEST['keyword']);
+                $categories = get_terms(
+                    array(
+                        'taxonomy' => 'course-cat',
+                        'name__like' => $keyword,
+                    )
+                );
+                function title_filter($where, &$wp_query)
+                {
+                    global $wpdb;
+                    if ($search_term = $wp_query->get('search_prod_title')) {
+                        $where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . esc_sql($wpdb->esc_like($search_term)) . '%\'';
+                    }
+                    return $where;
+                }
+                $args = array(
+                    'post_status' => 'publish',
+                    'post_type' => 'course',
+                    'orderby' => 'meta_value_num',
+                    // 1. define a custom query variable here to pass your term through
+                    'search_prod_title' => $keyword,
+                    'meta_query' => array(
+                        array(
+                            // 'key' => 'average_rating',
+                            'key' => 'vibe_students',
+                        ),
+                        array(
+                            'key' => 'vibe_product',
+                            'value' => array(''),
+                            'compare' => 'NOT IN'
+                        )
+                    ),
+                    //		'tax_query' => array(
+                    //			array(
+                    //				'taxonomy' => 'course-cat',
+                    //				'field'    => 'ID',
+                    //				'terms'    => 7515,
+                    //				'operator' => 'NOT IN'
+                    //			)
+                    //		),
+                    'order' => 'DESC',
+                    'posts_per_page' => 10,
+                );
+                add_filter('posts_where', 'title_filter', 10, 2);
+                $the_query = new WP_Query($args);
+                remove_filter('posts_where', 'title_filter', 10);
+                if (!empty($categories) && !is_wp_error($categories)) { ?>
+        <div class="foy-search-cat-list">
+            <?php
+                    foreach ($categories as $category) { ?>
+                <li class="foy-search-cat">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <a href="<?php echo home_url() . '/course-cat/' . $category->slug; ?>">
+                        <?php
+                        $post_title = $category->name;
+                        $highlighted_title = preg_replace(
+                            '/(' . preg_quote($keyword, '/') . ')/i',
+                            '<span class="search-highlight">$1</span>',
+                            $post_title
+                        );
+                        echo $highlighted_title;
+                        ?>
+                    </a>
+                </li>
+            <?php
+                    } ?>
+        </div>
+        <hr>
+        <?php
+                }
+
+                if ($the_query->have_posts()) {
+                    while ($the_query->have_posts()):
+                        $the_query->the_post();
+        ?>
+            <li class="foy-course-list">
+                <a href="<?php echo esc_url(get_permalink()); ?>">
+                    <?php
+                        $search_term = get_query_var('search_prod_title');
+                        $post_title = get_the_title();
+                        $highlighted_title = preg_replace(
+                            '/(' . preg_quote($keyword, '/') . ')/i',
+                            '<span class="search-highlight">$1</span>',
+                            $post_title
+                        );
+                        echo $highlighted_title;
+                    ?>
+                </a>
+            </li>
+            <hr>
+    <?php endwhile;
+                    wp_reset_postdata();
+                } else {
+                    echo '<h3>No Results Found</h3>';
+                }
+                die();
+            }
+            add_action('wp_ajax_data_fetch', 'data_fetch');
+            add_action('wp_ajax_nopriv_data_fetch', 'data_fetch');
